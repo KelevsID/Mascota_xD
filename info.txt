@@ -12,4 +12,7 @@ Versión 1.0.4 de la aplicación de mascota // relaciones muchos a muchos
         Mascota  -  Plan       Tabla adicional {PagoPlan}
         Mascota  -  Empleado   Tabla adicional {VisitaPreventiva}
         %La relacion Mascota - Empleado muchos a muchos genera conficlto, omitida por el momento%
-Versión 1.0.5 de la aplicación de mascota // controladores        
+Versión 1.0.5 de la aplicación de mascota // controladores
+Versión 1.1.0 de la aplicación de mascota // Generar de Clave y Cifrar de Clave    
+Versión 1.1.1 de la aplicación de mascota // Autenticación
+Versión 1.1.2 de la aplicación de mascota // Estrategia de autorización

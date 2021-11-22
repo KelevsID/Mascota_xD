@@ -17,8 +17,10 @@ import {
   del,
   requestBody,
   response,
+  HttpErrors,
 } from '@loopback/rest';
-import {Usuario} from '../models';
+import { Llaves } from '../config/llaves';
+import {Credenciales, Usuario} from '../models';
 import {UsuarioRepository} from '../repositories';
 import { AutenticacionService } from '../services';
 const fetch = require('node-fetch');
@@ -30,6 +32,34 @@ export class UsuarioController {
     @service(AutenticacionService)
     public servicioAutenticacion: AutenticacionService,
   ) {}
+
+  @post('/identificar-usuario', {
+    responses:{
+      '200':{
+        description: "Identificación de usuario"
+      }
+    }
+  })
+  async identificarUsuario(
+    @requestBody() credenciales: Credenciales
+  ){
+    let u = await this.servicioAutenticacion.IdentificarUsuario(credenciales.usuario, credenciales.clave);
+    if(u){
+      let token = this.servicioAutenticacion.GenerarTokenJWT(u);
+      return {
+        datos: {
+          nombre: u.nombres +" "+ u.apellidos,
+          correo: u.email,
+          id: u.id,
+          rol: u.rol,
+          permisos: u.permisos
+        },
+        tk: token
+      }
+    }else{
+      throw new HttpErrors[401]("Datos inválidos");
+    }
+  }
 
   @post('/usuarios')
   @response(200, {
@@ -57,8 +87,7 @@ export class UsuarioController {
     let destino = usuario.email;
     let asunto = 'Registro en la plataforma';
     let contenido = `Hola ${usuario.nombres +" "+ usuario.apellidos}, su nombre de usuario es: ${usuario.email} y su contraeña es: ${clave}`;
-    //fetch(`${Llaves.urlServicioNotificaciones}/correo?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
-    fetch(`http://127.0.0.1:5000/correo?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
+    fetch(`${Llaves.urlServicioNotificaciones}/correo?correo_destino=${destino}&asunto=${asunto}&contenido=${contenido}`)
     .then((data:any) => {
       console.log(data);
     })
