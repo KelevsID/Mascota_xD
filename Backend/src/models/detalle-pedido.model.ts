@@ -27,6 +27,15 @@ export class DetallePedido extends Entity {
   })
   pagoTotal: number;
 
+  @property({
+    type: 'string',
+  })
+  pedidoId?: string;
+
+  @property({
+    type: 'string',
+  })
+  productoId?: string;
 
   constructor(data?: Partial<DetallePedido>) {
     super(data);

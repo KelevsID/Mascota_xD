@@ -33,6 +33,15 @@ export class PagoPlan extends Entity {
   })
   observaciones: string;
 
+  @property({
+    type: 'string',
+  })
+  planId?: string;
+
+  @property({
+    type: 'string',
+  })
+  mascotaId?: string;
 
   constructor(data?: Partial<PagoPlan>) {
     super(data);

@@ -63,10 +63,10 @@ export class Empleado extends Entity {
   comision?: number;
 
   @property({
-    type: 'string',
-    required: true,
+    type: 'array',
+    itemType: 'string',
   })
-  nivel: string;
+  nivel?: string[];
 
   @property({
     type: 'string',
@@ -76,7 +76,7 @@ export class Empleado extends Entity {
   @hasMany(() => Mascota)
   mascotas: Mascota[];
 
-  constructor(data?: Partial<Empleado>) {
+constructor(data?: Partial<Empleado>) {
     super(data);
   }
 }

@@ -33,6 +33,15 @@ export class ConsultaVeterinaria extends Entity {
   })
   observacionFormulario: string;
 
+  @property({
+    type: 'string',
+  })
+  mascotaId?: string;
+
+  @property({
+    type: 'string',
+  })
+  proveedorId?: string;
 
   constructor(data?: Partial<ConsultaVeterinaria>) {
     super(data);

@@ -2,4 +2,10 @@ Versión 1.0.1 de la aplicación de mascota // modulos
 Versión 1.0.2 de la aplicación de mascota // repositorios
 Versión 1.0.3 de la aplicación de mascota // relaciones 1 a muchos 
         Cliente - Mascota && Cliente - Pedido && Empleado - Mascota && Proveedor - Producto
-Versión 1.0.4 de la aplicación de mascota // relaciones 1 muchos 
+Versión 1.0.4 de la aplicación de mascota // relaciones muchos a muchos
+        Pedido   -  Producto   Tabla adicional {DetallePedido}
+        Mascota  -  Proveedor  Tabla adicional {ConsultaVeterinaria}
+        Mascota  -  Plan       Tabla adicional {PagoPlan}
+        Mascota  -  Empleado   Tabla adicional {VisitaPreventiva}
+        %La relacion Mascota - Empleado muchos a muchos genera conficlto, omitida por el momento%
+Versión 1.0.5 de la aplicación de mascota // controladores        

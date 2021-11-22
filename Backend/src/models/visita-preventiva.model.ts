@@ -62,7 +62,7 @@ export class VisitaPreventiva extends Entity {
     required: true,
   })
   recomendaciones: string;
-
+  
 
   constructor(data?: Partial<VisitaPreventiva>) {
     super(data);
