@@ -23,11 +23,11 @@ export class AutenticacionService {
     return clave;
   }
 
- /*CifrarClave(clave:string){
+ CifrarClave(clave:string){
     let claveCifrada = cryptoJS.MD5(clave).toString();
     return claveCifrada;
   }
-
+/*
   IdentificarPersona(usuario:string, clave:string){
     try{
       let p = this.personaRepository.findOne({where: {correo: usuario, clave: clave}});
