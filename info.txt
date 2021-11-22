@@ -1,3 +1,7 @@
+########
+npm install
+########
+
 Versión 1.0.1 de la aplicación de mascota // modulos
 Versión 1.0.2 de la aplicación de mascota // repositorios
 Versión 1.0.3 de la aplicación de mascota // relaciones 1 a muchos 
