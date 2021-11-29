@@ -40,6 +40,18 @@ export class Cliente extends Entity {
     required: true,
   })
   ciudad: string;
+  
+  @property({
+    type: 'string',
+    required: true,
+  })
+  email: string;
+
+  @property({
+    type: 'string',
+    required: false,
+  })
+  password: string;
 
   @property({
     type: 'array',

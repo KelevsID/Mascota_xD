@@ -16,3 +16,5 @@ Versión 1.0.5 de la aplicación de mascota // controladores
 Versión 1.1.0 de la aplicación de mascota // Generar de Clave y Cifrar de Clave    
 Versión 1.1.1 de la aplicación de mascota // Autenticación
 Versión 1.1.2 de la aplicación de mascota // Estrategia de autorización Administrador
+##################################################################################################
+Versión 1.1.3 de la aplicación de mascota // Frontend Bootstrap Registro Cliente y Usuario
