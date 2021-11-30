@@ -11,7 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <!-- <link href="/Frontend/Bootstrap/recursos/css/bootstrap.min.css" rel="stylesheet">-->
-    <title>Mascota Feliz!</title>
+    <title>Hello, world!</title>
 </head>
 
 <body>
@@ -55,13 +55,66 @@
                 </div>
             </div>
         </nav>
-        
+
+        <div class="container p-5">
+            <form class="row g-2 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="txtEspecie" class="form-label">Especie</label>
+                    <select class="form-select" id="txtEspecie" required>
+                      <option selected disabled value="">Elija Especie...</option>
+                      <option>Felino</option>
+                      <option>Canino</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="txtRaza" class="form-label">Raza</label>
+                    <input type="text" class="form-control" placeholder="Raza de la mascota" id="txtRaza" required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="txtColor" class="form-label">Color</label>
+                    <input type="text" class="form-control" placeholder="Marron" id="txtColor"
+                        required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Firulais" id="txtNombre" required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="txtSexo" class="form-label">Sexo</label>
+                    <select class="form-select" id="txtSexo" required>
+                      <option selected disabled value="">Elija Sexo...</option>
+                      <option>...</option>
+                      <option>Hembra</option>
+                      <option>Macho</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Solicitud de Registro Mascota</button>
+                </div>
+            </form>
+        </div>
     </div>
 
 
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
-    <script type="text/javascript" src="/Frontend/Bootstrap/recursos/funciones.js"></script>
+    <script type="text/javascript" src="/Frontend/Bootstrap/recursos/funcionesMascota.js"></script>
     
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

@@ -40,20 +40,20 @@ export class Mascota extends Entity {
   color: string;
 
   @property({
-    type: 'boolean',
+    type: 'string',
     required: true,
   })
-  sexo: boolean;
+  sexo: string;
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   peso: number;
 
   @property({
     type: 'boolean',
-    required: true,
+    required: false,
   })
   enfermedadesPre: boolean;
 
@@ -64,25 +64,25 @@ export class Mascota extends Entity {
 
   @property({
     type: 'date',
-    required: true,
+    required: false,
   })
   fechaNacimiento: string;
 
   @property({
     type: 'boolean',
-    required: true,
+    required: false,
   })
   estadoPlan: boolean;
 
   @property({
     type: 'boolean',
-    required: true,
+    required: false,
   })
   rescindido: boolean;
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   motivoRescindido: string;
 

@@ -11,7 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <!-- <link href="/Frontend/Bootstrap/recursos/css/bootstrap.min.css" rel="stylesheet">-->
-    <title>Mascota Feliz!</title>
+    <title>Hello, world!</title>
 </head>
 
 <body>
@@ -55,7 +55,76 @@
                 </div>
             </div>
         </nav>
-        
+        <div class="container p-5">
+            <form class="row g-2 needs-validation" novalidate>
+                <div class="col-md-8">
+                    <label for="txtDocumento" class="form-label">Documento</label>
+                    <input type="text" class="form-control" placeholder="1110487840" id="txtDocumento" required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtNombres" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" placeholder="Paulo Andrés" id="txtNombres" required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtApellidos" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" placeholder="Camacho Solimán" id="txtApellidos"
+                        required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="txtTelefono" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" placeholder="310 123 4567" id="txtTelefono" required>
+                    <div class="invalid-feedback">
+                        Campo requerido!
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <label for="txtCorreo" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" placeholder="correo@correo.com"
+                            id="txtCorreo" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Campo requerido!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtRol" class="form-label">Rol</label>
+                    <select class="form-select" id="txtRol" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Veterinario</option>
+                      <option>Empleado</option>
+                      <option>Administrador</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="txtPermisos" class="form-label">Permisos</label>
+                    <select class="form-select" id="txtPermisos" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Empleado</option>
+                      <option>Administrador</option> 
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
     </div>
 
 
