@@ -51,8 +51,6 @@ export class UsuarioController {
           nombre: u.nombres +" "+ u.apellidos,
           correo: u.email,
           id: u.id,
-          rol: u.rol,
-          permisos: u.permisos
         },
         tk: token
       }
